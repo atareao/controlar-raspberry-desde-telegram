@@ -1,0 +1,13 @@
+[Unit]
+Description=Send message on shutdown
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash /home/pi/bot/sendmessage.sh "Bienvenido..."
+ExecStop=/bin/bash /home/pi/bot/sendmessage.sh "Adiossss"
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

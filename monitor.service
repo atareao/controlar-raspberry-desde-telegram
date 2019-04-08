@@ -1,0 +1,8 @@
+[Unit]
+Description=Monitor bot directory
+
+[Service]
+ExecStart=/home/pi/bot/monitor.sh
+
+[Install]
+WantedBy=multi-user.target
